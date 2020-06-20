@@ -8,7 +8,7 @@ This extension is used to help you select the latitude and longitude in the form
 ## Installation
 
 ```bash
-composer require laravel-admin-ext/latlong -vvv
+composer require antto1/laravel-admin-ext-latlong -vvv
 ```
 
 ## Configuration
@@ -25,7 +25,7 @@ Open `config/admin.php` and add the following configuration to the extensions se
             'enable' => true,
 
             // Specify the default provider
-            'default' => 'google',
+            'default' => 'baidu',
 
             // According to the selected provider above, fill in the corresponding api_key
             'providers' => [
@@ -33,21 +33,21 @@ Open `config/admin.php` and add the following configuration to the extensions se
                 'google' => [
                     'api_key' => '',
                 ],
-                
+
                 'yadex' => [
                     'api_key' => '',
                 ],
 
                 'baidu' => [
-                    'api_key' => 'xck5u2lga9n1bZkiaXIHtMufWXQnVhdx',
+                    'api_key' => '',
                 ],
 
                 'tencent' => [
-                    'api_key' => 'VVYBZ-HRJCX-NOJ4Z-ZO3PU-ZZA2J-QPBBT',
+                    'api_key' => '',
                 ],
 
                 'amap' => [
-                    'api_key' => '3693fe745aea0df8852739dac08a22fb',
+                    'api_key' => '',
                 ],
             ]
         ]
@@ -77,12 +77,5 @@ Use in show page
 $show->field('Position')->latlong('lat_column', 'long_column', $height = 400, $zoom = 16);
 ```
 
-## Donate
-
-如果觉得这个项目帮你节约了时间，不妨支持一下;)
-
-![-1](https://cloud.githubusercontent.com/assets/1479100/23287423/45c68202-fa78-11e6-8125-3e365101a313.jpg)
-
-License
 ------------
 Licensed under [The MIT License (MIT)](LICENSE).
